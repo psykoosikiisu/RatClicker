@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>RatClicker</title>
+    <script src="script.js" defer></script>
+
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            background-color: #f7accb;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #click-count {
+            font-size: 16px;
+            color: hwb(20 0% 62%);
+            margin-top: 10px;
+            position: table;
+            top: 20px;
+            left: 20px;
+        }
+
+        #click-count-table {
+            position: fixed;
+            top: 70px;
+            left: 5px;
+        }
+
+        #rat-image {
+            width: 175px;
+            height: 175px;
+            cursor: pointer;
+            transition: left 0.3s ease-in, top 0.3s ease-in;
+            position: absolute;
+            cursor: crosshair;
+        }
+
+        .point-popup {
+            position: absolute;
+            font-size: 24px;
+            font-weight: bold;
+            color: #d45d08;
+            pointer-events: none;
+            animation: floatUp 2s ease-out forwards;
+        }
+
+        @keyframes floatUp {
+            0% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateY(-40px);
+            }
+        }
+
+        #upgrade-button {
+            background-color: #ea7e5d;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            font-size: medium;
+            cursor: pointer;
+            position: fixed;
+            top: 5px;
+            left: 5px;
+            border: none;
+        }
+
+        #upgrade-button:hover {
+            background-color: #d45d08;
+        }
+
+        #click-count-table {
+            background-color: #ea7e5d;
+            border: none;
+            border-radius: 10px;
+            padding: 2px;
+            position: fixed;
+            top: 60px;
+            left: 5px;
+            display: inline-block;
+        }
+
+        #shop {
+            background-color: #ea7e5d;
+            border: none;
+            border-radius: 10px;
+            border-color: none;
+            padding: 5px;
+            position: fixed;
+            top: 99px;
+            left: 5px;
+            display: inline-block;
+        }
+
+        #pause-menu {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+        }
+
+        #pause-menu-content {
+            background-color: #ea7e5d;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        #pause-button {
+            position: fixed;
+            top: 5px;
+            right: 5px;
+            background-color: #ea7e5d;
+            border-radius: 10px;
+            padding: 5px;
+            border: none;
+            text-align: center;
+            font-size: medium;
+            cursor: pointer;
+
+        }
+        #pause-button:hover {
+            background-color: #d45d08;
+        }
+
+        #resume-button {
+            background-color: hsl(14, 68%, 46%);
+            border-radius: 10px;
+            border-style: none;
+            padding: 5px 5px;
+            text-align: center;
+            font-size: medium;
+            cursor: pointer;
+
+
+        }
+        #resume-button:hover {
+            background-color: #c45b3b;
+        }
+        #shop2 {
+            position: fixed;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            top:45px;
+            right: 5px;
+            background-color: #ea7e5d;
+
+            
+        }
+        #shop2:hover {
+        background-color: #d45d08;
+
+        }
+        #back {
+            position: fixed;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            bottom: 10px;
+            left: 10px;
+            background-color: #ea7e5d;
+        }
+        #back:hover {
+            background-color: #d45d08;
+        }
+    </style>
+</head>
+
+<body>
+
+    <img id="rat-image" src="images/rat.png">
+
+    <table id="click-count-table">
+        <tr>
+            <td>
+                points: <span id="click-count">0</span>
+            </td>
+        </tr>
+    </table>
+
+
+    <div id="shop">
+        <button id="upgrade-button">
+            upgrade click (cost: <span id="upgrade-cost">50</span>)
+        </button>
+        <div> click x: <span id="click-power">1</span></div>
+    </div>
+
+    <button id="pause-button">⏸ Pause</button>
+
+    <div id="pause-menu">
+        <div id="pause-menu-content">
+            <h2>Paused</h2>
+            <p>Rat Library:</p>
+            <input type="file" id="image-upload" accept="image/*">
+            <br><br>
+            <button id="resume-button">Resume</button>
+        </div>
+    </div>
+    <button id="shop2" onclick="window.location.href='shop.html'"> shop </button>
+    <button id="back" onclick="window.location.href='index.html'"> back </button>
+</body>
+
+</html>

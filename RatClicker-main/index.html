@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Rat spinner</title>
+  <style>
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+    }
+
+    body {
+      background-color: #f7accb;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #ratButton {
+      background-color: #ff80a6;
+      border-radius: 40px;
+      border-style: none;
+      color: rgb(255, 235, 244);
+      padding: 50px 150px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 30px;
+      font-style: italic;
+      cursor: pointer;
+      opacity: 0.8;
+    }
+
+    #ratButton:hover {
+      opacity: 1;
+    }
+
+    #loginButton {
+      background-color: #ff80a6;
+      position: fixed;
+      top: 1%;
+      right: 1%;
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      color: aliceblue;
+      cursor: pointer;
+      opacity: 0.8;
+      }
+
+    #loginButton:hover  {
+      opacity: 1;
+    }
+
+  </style>
+</head>
+
+<body>
+  <button id="ratButton" onclick="window.location.href='RatClicker.html'">I'm feeling rat!</button>
+  <button id="loginButton" onclick="window.location.href='login.html'"> login</button>
+</body>
+
+</html>

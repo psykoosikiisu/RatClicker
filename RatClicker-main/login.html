@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> login </title>
+        <script src="login.js"></script>
+        <style>
+        html,
+        body {
+            background-color: #f7accb;
+        }
+
+        #pöytä {
+        background-color: whitesmoke;
+        border-radius: 10px;
+        position: absolute;
+        top: 25%;
+        right:40%;
+        padding: 20px;
+        }
+
+        </style> 
+
+    </head>
+    <body>
+        <div id="pöytä">
+        <form>
+            <h2> login </h2>
+            <label for="email"> email</label><br>
+            <input type="text" id="email" placeholder="john.pork@shitmail.com" name="email" required><br> 
+            <label for="password"> password </label><br>
+            <input type="text" id="password" placeholder="j0hn.p0rk.1s.c00l" name="password" maxlength="8" required><br>
+
+            <br>
+            <br>
+            <input type="button" value="cancel" onclick="window.location.href='index.html'">
+            <input type="submit" id="submit" onclick="SubmitEvent" value="submit"><br>
+
+        </form>
+    </div>
+    </body>
+</html>
